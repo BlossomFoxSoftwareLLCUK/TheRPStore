@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENVI Industrial Systems ™</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ENVI Industrial Systems ™</h1>
+        <nav>
+            <ul id="nav-items">
+                <li><a href="#" onclick="showProducts()">Home</a></li>
+                <li><a href="#" onclick="showCart()">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#" id="logout" onclick="logout()" style="display: none;">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search Products..." onkeyup="searchProducts()">
+        </div>
+    </header>
+
+    <main>
+        <div id="login-view" class="view">
+            <form id="login-form" onsubmit="login(event)">
+                <h2>Login</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="balance">Balance: £<span id="balance-amount">10000</span></div>
+        <div id="products" class="view"></div>
+        <div id="cart" class="view" style="display:none;"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ENVI Industrial Systems ™</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
